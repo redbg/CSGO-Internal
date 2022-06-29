@@ -100,7 +100,6 @@ int main()
         if (!strcmp(pe32.szExeFile, "csgo.exe"))
         {
             InjectDLL(pe32.th32ProcessID, path);
-            break;
         }
     } while (Process32Next(hProcessSnap, &pe32));
     CloseHandle(hProcessSnap);

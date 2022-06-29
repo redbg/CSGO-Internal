@@ -87,11 +87,11 @@ namespace CSGO
             {
                 // 发光
                 (*glowObjectManager)[aimbotEntity->m_iGlowIndex].renderWhenOccluded = true;
-                (*glowObjectManager)[aimbotEntity->m_iGlowIndex].alpha              = 1.0f;
+                (*glowObjectManager)[aimbotEntity->m_iGlowIndex].alpha              = aimbotEntity->m_bSpotted ? 0.8 : 0.6;
                 (*glowObjectManager)[aimbotEntity->m_iGlowIndex].green              = (1.0f / 100.0f) * aimbotEntity->m_iHealth;
                 (*glowObjectManager)[aimbotEntity->m_iGlowIndex].red                = 1.0f - (*glowObjectManager)[aimbotEntity->m_iGlowIndex].green;
 
-                if (GetFov((*clientState)->m_ViewAngles, aimbotAngle) < 10)
+                if (GetFov((*clientState)->m_ViewAngles, aimbotAngle) < 10 && aimbotEntity->m_bSpotted)
                 {
                     // 自瞄
                     Vector delta = NormalizeAngles(aimbotAngle - (*clientState)->m_ViewAngles);

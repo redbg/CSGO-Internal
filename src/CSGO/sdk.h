@@ -33,6 +33,7 @@ namespace CSGO
             DEFINE_MEMBER_N(Matrix3x4 *, m_BoneMatrix, hazedumper::netvars::m_dwBoneMatrix); // 骨骼矩阵
             DEFINE_MEMBER_N(int, m_iTeamNum, hazedumper::netvars::m_iTeamNum);               // 队伍
             DEFINE_MEMBER_N(int, m_iGlowIndex, hazedumper::netvars::m_iGlowIndex);
+            DEFINE_MEMBER_N(bool, m_bSpotted, hazedumper::netvars::m_bSpotted);
         };
     };
 
