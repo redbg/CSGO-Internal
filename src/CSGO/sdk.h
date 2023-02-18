@@ -29,6 +29,7 @@ namespace CSGO
             DEFINE_MEMBER_N(bool, m_bDormant, hazedumper::signatures::m_bDormant);           // 是否休眠
             DEFINE_MEMBER_N(int, m_iHealth, hazedumper::netvars::m_iHealth);                 // 血量
             DEFINE_MEMBER_N(Vector, m_vecOrigin, hazedumper::netvars::m_vecOrigin);          // 坐标
+            DEFINE_MEMBER_N(Vector, m_vecVelocity, hazedumper::netvars::m_vecVelocity);      // 速度
             DEFINE_MEMBER_N(Vector, m_vecViewOffset, hazedumper::netvars::m_vecViewOffset);  // 视图坐标
             DEFINE_MEMBER_N(Matrix3x4 *, m_BoneMatrix, hazedumper::netvars::m_dwBoneMatrix); // 骨骼矩阵
             DEFINE_MEMBER_N(int, m_iTeamNum, hazedumper::netvars::m_iTeamNum);               // 队伍

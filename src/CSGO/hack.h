@@ -69,6 +69,11 @@ namespace CSGO
                             Matrix3x4 boneMatrix = entity->m_BoneMatrix[j];
                             Vector    vecBone    = Vector{boneMatrix.m14, boneMatrix.m24, boneMatrix.m34};
 
+                            // 预判
+                            vecBone.x += entity->m_vecVelocity.x / 10;
+                            vecBone.y += entity->m_vecVelocity.y / 10;
+                            // vecBone.z += entity->m_vecVelocity.z / 10;
+
                             Vector aimbotAngleTemp = CalcAngle(vecView, vecBone);
 
                             // 冒泡排序
